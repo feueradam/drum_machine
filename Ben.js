@@ -31,3 +31,14 @@ function playIdeaOne() {
         }
     }
 }
+
+// Function after "Play" button is pressed
+function playBtnPressed() {
+    // Grap those variables from front end
+    const tempo = 0;        // Tempo
+    const isLoop = true;    // Is-Loop flag
+    const matrix = [];      // Boolean data array
+
+    // Calculate the how many second for 1 beat
+    const secondPerBeat = 1.0 / (tempo / 60);
+}
