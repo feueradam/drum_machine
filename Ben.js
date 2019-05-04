@@ -2,8 +2,9 @@ const timeoutTime = 500;
 const MAX_BEAT = 16;
 const DRUMS_LENGTH = 6;
 var isLoop = false;
-var isPlay = false;          // Is-Loop flag
-var matrix = [];           // Boolean data array
+var isPlay = false;         // Is-Loop flag
+var matrix = [];            // Boolean data array
+var instrument = [];        // Channel 10th with key note (35~81)
 var beat = 0;               // Store the time domain iterator of matrix
 
 // Drum instrument play back function
@@ -53,7 +54,7 @@ function playBtnPressed() {
     isPlay = true;
 
     // Calculate the how many second for 1 beat (Second per Beat)
-    const spb = 1.0 / (tempo / 60.0);
+    const spb = 1.0 / (tempo / 60.0) * 1000.0;  // Change second to ms
     // Auto play full beats
     playOneBeat(spb);
 }
