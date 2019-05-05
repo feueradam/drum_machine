@@ -31,6 +31,7 @@
 
     <!-- the lab JavaScript -->
 	<script src="lab01.js" type="text/javascript"></script>
+    <script src="Ben.js" type="text/javascript"></script>
 
 
     <title>COMP4431 Multimedia Computing - MINI Project</title>
@@ -84,13 +85,12 @@
                                 <th><button type="button" class="btn btn-default cellstep"  ></button></th>
                                 <th><button type="button" class="btn btn-default cellstep"  ></button></th>
                                 <th>Volume</th>
-                                <th>Pitch</th>
                                 <th>Panning</th>
                             </tr>
                     </thead>
                     <tbody>
                         <tr id="sample0">
-                            <td id="sample0name">Track 0</td>
+                            <td id="track0" data-num="35">Test 35</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -108,11 +108,10 @@
                             <td><button type="button" class="btn btn-default cell col14" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume0"></td>
-                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="pitch0"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning0"></td>
                         </tr>
                         <tr id="sample1">
-                            <td id="sample1name"> Track 1</td>
+                            <td id="track1" data-num="42"> Test 42</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -130,11 +129,10 @@
                             <td><button type="button" class="btn btn-default cell col14" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                              <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume1"></td>
-                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="pitch1"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning1"></td>
                         </tr>
                         <tr id="sample2">
-                            <td id="sample2name">Track 2</td>
+                            <td id="track" data-num="49">Test 49</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -152,11 +150,10 @@
                             <td><button type="button" class="btn btn-default cell col14" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume2"></td>
-                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="pitch2"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning2"></td>
                         </tr>
                         <tr id="sample3">
-                            <td id="sample3name">Track 3</td>
+                            <td id="track3" data-num="57">Test 57</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -174,11 +171,10 @@
                             <td><button type="button" class="btn btn-default cell col14" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume3"></td>
-                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="pitch3"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning3"></td>
                         </tr>
                         <tr id="sample4">
-                            <td id="sample4name">Track 4</td>
+                            <td id="track4" data-num="36">Test 36</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -196,11 +192,10 @@
                             <td><button type="button" class="btn btn-default cell col14" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume4"></td>
-                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="pitch4"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning4"></td>
                         </tr>
                         <tr id="sample5">
-                            <td id="sample5name">Track 5</td>
+                            <td id="test5" data-num="45">Test 45</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -218,7 +213,6 @@
                             <td><button type="button" class="btn btn-default cell col14" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume5"></td>
-                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="pitch5"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning5"></td>
                         </tr>
                     </tbody>
