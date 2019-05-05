@@ -1,7 +1,7 @@
 const timeoutTime = 500;
 const MAX_BEAT = 16;
 const DRUMS_LENGTH = 7;
-var isLoop = false;
+var isLoop = true;
 var isPlay = false;         // Is-Loop flag
 //var matrix = [];            // Boolean data array
 var instrument = [];        // Channel 10th with key note (35~81)
@@ -27,7 +27,11 @@ function playDrum(drumType, panning, amplitude) {
 // How to play?
 // Play one beat[t] for each drum instrument
 function playOneBeat(spb) {
-    //CODE to move the step
+    
+    if (beat >= MAX_BEAT) {
+        beat = 0;
+    }
+    
     $(".cellstep").removeClass('active');
     $("#step").find("th").eq(beat+1).find("button").addClass('active');
 
@@ -37,7 +41,6 @@ function playOneBeat(spb) {
             //alert("in here" + " beat: "+ beat + "i: " + i); //WORKING NOW
             var volume = $('#volume'+i).val(); //get infomation for that instrument
             var panning = $('#panning'+i).val();
-            volume=127;
             var instrument = $('#track'+i).data("num");
             playDrum(instrument, panning, volume);
             //playDrum(instrument[i], pannings[i], amplitude); //COMMENTED OUT FOR THE MOMENT AS DON'T HAVE ANY VALS
@@ -46,9 +49,7 @@ function playOneBeat(spb) {
 
     // Move to next beat
     beat++;
-    if (beat >= MAX_BEAT) {
-        beat = 0;
-    }
+
     if (isPlay && (beat < MAX_BEAT || isLoop)) {
         setTimeout(function () {
             playOneBeat(spb);
