@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<!-- shims -->
-	
+
 
 	<script src="midi-js/inc/shim/Base64.js" type="text/javascript"></script>
 	<script src="midi-js/inc/shim/Base64binary.js" type="text/javascript"></script>
@@ -53,17 +53,17 @@
 
       <p>
         You may need to wait a couple of seconds for the sound to load.<br>
-        
+
       </p>
 
         <div class="pull-right" style="margin-top:-10px; margin-right: 50px;">
             <form class="form-inline">
-                
+
                 <input type="number" id="pattern_tempo" value=120 class="form-control" />
                 <button type="button" id="pattern_play" class="btn btn-default btn-primary form-control"  >Play</button>
                 </div>
                      <h3>Drum Machine</h3>
-             
+
                 <table class="table" id="drum_machine">
                     <thead>
                         <tr id="step">
@@ -90,7 +90,7 @@
                     </thead>
                     <tbody>
                         <tr id="sample0">
-                            <td id="track0" data-num="35">Test 35</td>
+                            <td id="track0" data-num="42">Closed Hi-hat</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -111,7 +111,7 @@
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning0"></td>
                         </tr>
                         <tr id="sample1">
-                            <td id="track1" data-num="42"> Test 42</td>
+                            <td id="track1" data-num="46">Open Hi-hat</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -132,7 +132,7 @@
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning1"></td>
                         </tr>
                         <tr id="sample2">
-                            <td id="track" data-num="49">Test 49</td>
+                            <td id="track2" data-num="38">Acoustic Snare</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -153,7 +153,7 @@
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning2"></td>
                         </tr>
                         <tr id="sample3">
-                            <td id="track3" data-num="57">Test 57</td>
+                            <td id="track3" data-num="48">Hi-Mid Tom</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -174,7 +174,7 @@
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning3"></td>
                         </tr>
                         <tr id="sample4">
-                            <td id="track4" data-num="36">Test 36</td>
+                            <td id="track4" data-num="45">Low Tom</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -195,7 +195,7 @@
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning4"></td>
                         </tr>
                         <tr id="sample5">
-                            <td id="test5" data-num="45">Test 45</td>
+                            <td id="track5" data-num="35">Acoustic Bass Drum</td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -215,6 +215,27 @@
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume5"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning5"></td>
                         </tr>
+                        <tr id="sample6">
+                            <td id="track6" data-num="51">Ride Cymbal 1</td>
+                            <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col3" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col4" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col5" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col6" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col7" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col8" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col9" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col10" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col11" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col12" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col13" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col14" data-toggle="button" ></button></td>
+                            <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
+                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="volume6"></td>
+                            <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning6"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -223,5 +244,3 @@
 
   </body>
 </html>
-
-

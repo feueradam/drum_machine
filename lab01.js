@@ -1,7 +1,7 @@
 var matrix;
 $(document).ready(function() {
     var isplaying=0;
-    var num_tracks=6;
+    var num_tracks=7;
     var length = 16;
     matrix = new Array(num_tracks);
     for(var col=0; col< num_tracks; col++){
@@ -15,7 +15,7 @@ $(document).ready(function() {
     }
    //MATRIX GOES [ROW][COL]
     //debugger;
-    
+
 
         $(".cell").click(function() {
             //get index of the cell

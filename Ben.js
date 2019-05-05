@@ -1,6 +1,6 @@
 const timeoutTime = 500;
 const MAX_BEAT = 16;
-const DRUMS_LENGTH = 6;
+const DRUMS_LENGTH = 7;
 var isLoop = false;
 var isPlay = false;         // Is-Loop flag
 //var matrix = [];            // Boolean data array
@@ -27,10 +27,6 @@ function playDrum(drumType, panning, amplitude) {
 // How to play?
 // Play one beat[t] for each drum instrument
 function playOneBeat(spb) {
-    // Check if 'beat' is larger than MAX_BEAT when looping
-    if (beat >= MAX_BEAT) {
-        beat = 0;
-    }
     //CODE to move the step
     $(".cellstep").removeClass('active');
     $("#step").find("th").eq(beat+1).find("button").addClass('active');
@@ -43,13 +39,16 @@ function playOneBeat(spb) {
             var panning = $('#panning'+i).val();
             volume=127;
             var instrument = $('#track'+i).data("num");
-            playDrum(instrument, panning, volume); 
+            playDrum(instrument, panning, volume);
             //playDrum(instrument[i], pannings[i], amplitude); //COMMENTED OUT FOR THE MOMENT AS DON'T HAVE ANY VALS
         }
     }
 
     // Move to next beat
     beat++;
+    if (beat >= MAX_BEAT) {
+        beat = 0;
+    }
     if (isPlay && (beat < MAX_BEAT || isLoop)) {
         setTimeout(function () {
             playOneBeat(spb);
