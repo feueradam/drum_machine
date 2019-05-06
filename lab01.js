@@ -1,7 +1,7 @@
 var matrix;
 $(document).ready(function() {
     var isplaying=0;
-    var num_tracks=7;
+    var num_tracks=9;
     var length = 16;
     matrix = new Array(num_tracks);
     for(var col=0; col< num_tracks; col++){
