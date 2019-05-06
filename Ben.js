@@ -17,7 +17,7 @@ function playDrum(drumType, panning, amplitude) {
     // Prompt the amplitude
     amplitude = (amplitude > MAX_AMPLITUDE) ? MAX_AMPLITUDE : (amplitude < MIN_AMPLITUDE) ? MIN_AMPLITUDE : amplitude;
     // Drum chaanel  = 9
-    MIDI.noteOn(0, drumType, amplitude);
+    MIDI.noteOn(0, drumType, amplitude, 0, panning);
     // Note off the drum
     setTimeout(function functionName() {
         MIDI.noteOff(0, drumType);
@@ -41,6 +41,7 @@ function playOneBeat(spb) {
             //alert("in here" + " beat: "+ beat + "i: " + i); //WORKING NOW
             var volume = $('#volume'+i).val(); //get infomation for that instrument
             var panning = $('#panning'+i).val();
+            panning = panning/5-1;
             var instrument = $('#track'+i).data("num");
             playDrum(instrument, panning, volume);
             //playDrum(instrument[i], pannings[i], amplitude); //COMMENTED OUT FOR THE MOMENT AS DON'T HAVE ANY VALS
