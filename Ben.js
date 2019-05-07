@@ -27,34 +27,42 @@ function playDrum(drumType, panning, amplitude) {
 // How to play?
 // Play one beat[t] for each drum instrument
 function playOneBeat(spb) {
+    if (isPlay){
 
-    if (beat >= MAX_BEAT) {
-        beat = 0;
-    }
+      if (beat >= MAX_BEAT) {
+          beat = 0;
+      }
 
-    $(".cellstep").removeClass('active');
-    $("#step").find("th").eq(beat+1).find("button").addClass('active');
+      $(".cellstep").removeClass('active');
+      $("#step").find("th").eq(beat+1).find("button").addClass('active');
 
-    // Play each instrument in one beat
-    for (var i = 0; i < DRUMS_LENGTH; i++) {
-        if (matrix[i][beat]) {
-            //alert("in here" + " beat: "+ beat + "i: " + i); //WORKING NOW
-            var volume = $('#volume'+i).val(); //get infomation for that instrument
-            var panning = $('#panning'+i).val();
-            panning = panning/5-1;
-            var instrument = $('#track'+i).data("num");
-            playDrum(instrument, panning, volume);
-            //playDrum(instrument[i], pannings[i], amplitude); //COMMENTED OUT FOR THE MOMENT AS DON'T HAVE ANY VALS
-        }
-    }
+      // Play each instrument in one beat
+      for (var i = 0; i < DRUMS_LENGTH; i++) {
+          if (matrix[i][beat]) {
+              //alert("in here" + " beat: "+ beat + "i: " + i); //WORKING NOW
+              var volume = $('#volume'+i).val(); //get infomation for that instrument
+              var panning = $('#panning'+i).val();
+              panning = panning/5-1;
+              var instrument = $('#track'+i).data("num");
+              if (!instrument) {
+              var instrument = $('#track'+i).val();
+              }
+              console.log(instrument);
+              playDrum(instrument, panning, volume);
+              //playDrum(instrument[i], pannings[i], amplitude); //COMMENTED OUT FOR THE MOMENT AS DON'T HAVE ANY VALS
+          }
+      }
 
-    // Move to next beat
-    beat++;
+      // Move to next beat
+      beat++;
 
-    if (isPlay && (beat < MAX_BEAT || isLoop)) {
-        setTimeout(function () {
-            playOneBeat(spb);
-        }, spb);
+      if (isPlay && (beat < MAX_BEAT || isLoop)) {
+          setTimeout(function () {
+              playOneBeat(spb);
+          }, spb);
+      }
+    } else {
+      return;
     }
 }
 
@@ -67,7 +75,7 @@ function playBtnPressed() {
     isPlay = true;
 
     // Calculate the how many second for 1 beat (Second per Beat)
-    const spb = 1.0 / (tempo / 60.0) * 1000.0;  // Change second to ms
+    const spb = 1.0 / (tempo / 60.0) * 1000.0 / 4;  // Change second to ms
     // Auto play full beats
     playOneBeat(spb);
 }

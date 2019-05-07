@@ -86,12 +86,17 @@
                                 <th><button type="button" class="btn btn-default cellstep"  ></button></th>
                                 <th>Volume</th>
                                 <th>Panning</th>
-                                <th>Pitch Bend</th>
                             </tr>
                     </thead>
                     <tbody>
                         <tr id="sample0">
-                            <td id="track0" data-num="42">Closed Hi-Hat</td>
+                            <td>
+                              <select id="track0">
+                                <option value=42>Closed Hi-Hat</option>
+                                <option value=44>Pedal Hi-hat</option>
+                                <option value=46>Open Hi-hat</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -110,10 +115,15 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume0"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning0"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch0"></td>
                         </tr>
                         <tr id="sample1">
-                            <td id="track1" data-num="46">Open Hi-Hat</td>
+                            <td>
+                              <select id="track1">
+                                <option value=46>Open Hi-hat</option>
+                                <option value=44>Pedal Hi-hat</option>
+                                <option value=42>Closed Hi-Hat</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -132,10 +142,14 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                              <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume1"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning1"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch1"></td>
                         </tr>
                         <tr id="sample2">
-                            <td id="track2" data-num="38">Acoustic Snare</td>
+                            <td>
+                              <select id="track2">
+                                <option value=38>Acoustic Snare</option>
+                                <option value=40>Electric Snare</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -154,10 +168,14 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume2"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning2"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch2"></td>
                         </tr>
                         <tr id="sample3">
-                            <td id="track3" data-num="48">Hi-Mid Tom</td>
+                            <td>
+                              <select id="track3">
+                                <option value=48>Hi-Mid Tom</option>
+                                <option value=50>High Tom</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -176,10 +194,14 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume3"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning3"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch3"></td>
                         </tr>
                         <tr id="sample4">
-                            <td id="track4" data-num="45">Low Tom</td>
+                            <td>
+                              <select id="track4">
+                                <option value=47>Low-Mid Tom</option>
+                                <option value=45>Low Tom</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -198,10 +220,14 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume4"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning4"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch4"></td>
                         </tr>
                         <tr id="sample5">
-                            <td id="track5" data-num="35">Acoustic Bass Drum</td>
+                            <td>
+                              <select id="track5">
+                                <option value=35>Acoustic Bass Drum</option>
+                                <option value=36>Electric Bass Drum</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -220,10 +246,14 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume5"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning5"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch5"></td>
                         </tr>
                         <tr id="sample6">
-                            <td id="track6" data-num="49">Crash Cymbal </td>
+                            <td>
+                              <select id="track6">
+                                <option value=49>Crash Cymbal 1</option>
+                                <option value=57>Crash Cymbal 2</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -242,10 +272,14 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume6"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning6"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch6"></td>
                         </tr>
                         <tr id="sample7">
-                            <td id="track7" data-num="51">Ride Cymbal</td>
+                            <td>
+                              <select id="track7">
+                                <option value=51>Ride Cymbal 1</option>
+                                <option value=59>Ride Cymbal 2</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -264,10 +298,14 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume7"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning7"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch7"></td>
                         </tr>
                         <tr id="sample8">
-                            <td id="track8" data-num="52">Chinese Cymbal</td>
+                            <td>
+                              <select id="track8">
+                                <option value=52>Chinese Cymbal</option>
+                                <option value=56>Cowbell</option>
+                              </select>
+                            </td>
                             <td><button type="button" class="btn btn-default cell col0" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col1" data-toggle="button" ></button></td>
                             <td><button type="button" class="btn btn-default cell col2" data-toggle="button" ></button></td>
@@ -286,7 +324,6 @@
                             <td><button type="button" class="btn btn-default cell col15" data-toggle="button" ></button></td>
                             <td><input type="range" class="custom-range" min="0" max="127" step="0.1" id="volume8"></td>
                             <td><input type="range" class="custom-range" min="0" max="10" step="0.1" id="panning8"></td>
-                            <td><input type="range" class="custom-range" min="-2" max="2" step="0.05" id="pitch8"></td>
                         </tr>
                     </tbody>
                 </table>
